@@ -1,0 +1,20 @@
+{
+  "name": "hyphae-web",
+  "version": "1.0.0",
+  "description": "web gui for hyphae",
+  "main": "main.js",
+  "scripts": {
+    "test": "test",
+    "deploy": "./deploy.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fmurray/hyphae.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fmurray/hyphae/issues"
+  },
+  "homepage": "https://github.com/fmurray/hyphae#readme"
+}
