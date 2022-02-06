@@ -16,3 +16,7 @@ https://github.com/binnes/WiFiMeshRaspberryPi/blob/master/part1/PIMESH.md
 
 ### disistributed computing
 https://docs.docker.com/engine/swarm/ingress/
+
+## Development Setup
+1. Download aws cli https://aws.amazon.com/cli/
+2. https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-cli-install.html
