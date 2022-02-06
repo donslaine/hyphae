@@ -16,12 +16,17 @@ let response;
  */
 exports.lambdaHandler = async (event, context) => {
     try {
+        sensor_id = null
         // const ret = await axios(url);
-        console.log("Event: ", event)
+        if (event.body) {
+            let body = JSON.parse(event.body)
+            if (body.sensor_id)
+                sensor_id = body.sensor_id
+        }
         response = {
             'statusCode': 200,
             'body': JSON.stringify({
-                message: 'hello world',
+                message: `sensor id was: ${sensor_id}`,
                 // location: ret.data.trim()
             })
         }
