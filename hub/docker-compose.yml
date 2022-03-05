@@ -1,0 +1,26 @@
+version: "3"
+services:
+  broker:
+    image: eclipse-mosquitto
+    volumes:
+      - "./mosquitto:/mosquitto"
+    networks:
+      - localnet
+    ports:
+      - "1883:1883"
+  node:
+    depends_on:
+      - broker
+    image: node
+    command: ["node", "/data/server.js"]
+    volumes:
+      - "./server:/data"
+      - "./node_modules:/node_modules"
+    user: "0"
+    networks:
+      - localnet
+    env_file: "./server/.env"
+    ports:
+      - "1880:1880"
+networks:
+  localnet:
