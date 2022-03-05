@@ -11,15 +11,10 @@ services:
   node:
     depends_on:
       - broker
-    image: hypriot/rpi-node
-    command: ["node", "/data/server.js"]
-    volumes:
-      - "./server:/data"
-      - "./node_modules:/node_modules"
+    image: hub-server
     user: "0"
     networks:
       - localnet
-    env_file: "./server/.env"
     ports:
       - "1880:1880"
 networks:
