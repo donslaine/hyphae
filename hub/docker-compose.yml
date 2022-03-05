@@ -11,7 +11,7 @@ services:
   node:
     depends_on:
       - broker
-    image: node
+    image: hypriot/rpi-node
     command: ["node", "/data/server.js"]
     volumes:
       - "./server:/data"
